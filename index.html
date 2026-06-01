@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Restaurant Menu Card</title>
+  <title>My Weather App Homepage</title>
  
   <style>
+    /* Universal selector: applies basic settings to the full page */
     * {
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
  
+    /* Body background uses colour, image pattern, repeat, position, and attachment */
     body {
-      font-family: Georgia, serif;
-      background-color: #fff8e7;
-      color: #3b2f2f;
-    }
- 
-    .menu-card {
-      width: 600px;
-      border: 3px solid #8b4513;
-      border-radius: 15px;
-      background-color: #ffffff;
-      box-shadow: 0 0 20px #8b4513;
-    }
- 
-    .restaurant-name {
-      font-size: 42px;
-      font-weight: bold;
-      color: #8b0000;
+      background-color: #87ceeb;
+      background-image: radial-gradient(circle, white 2px, transparent 3px);
+      background-size: 40px 40px;
+      background-repeat: repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      color: white;
       text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: 2px 2px 4px #d2b48c;
     }
  
-    .tagline {
+    h1 {
+      font-size: 36px;
+      color: white;
+    }
+ 
+    .subtitle {
       font-size: 18px;
-      font-style: italic;
-      text-align: center;
-      color: #6b4226;
-      text-decoration: underline;
+      color: #f0f8ff;
     }
  
-    .menu-section {
-      border: 2px solid #d2b48c;
-      box-shadow: 0 0 8px #d2b48c;
+    .weather-card {
+      width: 400px;
+      border: 3px solid white;
+      border-radius: 20px;
+      background-image: linear-gradient(to bottom right, #1e90ff, #87cefa);
     }
  
-    .section-title {
-      font-size: 26px;
-      color: #a0522d;
-      text-transform: capitalize;
-      text-decoration: overline;
+    .weather-icon {
+      font-size: 70px;
+      animation: floatCloud 3s infinite alternate;
     }
  
-    .dish-name {
-      font-size: 20px;
+    #temperature {
+      font-size: 48px;
       font-weight: bold;
-      color: #4b0082;
-      text-transform: capitalize;
+      color: #fffacd;
     }
  
-    .dish-name:hover {
-      transform: scale(1.1);
+    .details {
+      font-size: 18px;
+      color: white;
     }
  
-    .dish-description {
-      font-size: 15px;
-      line-height: 1.6;
-      text-indent: 30px;
-      color: #555555;
+    .forecast-section {
+      width: 600px;
+      border: 3px solid white;
+      border-radius: 15px;
+      background-image: radial-gradient(circle, white, #add8e6);
+      color: #003366;
     }
  
-    .special-offer {
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffffff;
-      background-color: #b22222;
-      text-align: center;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 3px #000000;
-      box-shadow: 0 0 12px #b22222;
-      transform: rotate(-2deg);
+    .forecast-title {
+      color: #003366;
+    }
+ 
+    .day {
+      border: 2px solid #4682b4;
+      font-size: 17px;
+      color: #003366;
+    }
+ 
+    /* Group selector: styles both headings together */
+    h2, h3 {
+      color: white;
+    }
+ 
+    /* CSS animation using @keyframes */
+    @keyframes floatCloud {
+      from {
+        transform: translateY(0);
+      }
+ 
+      to {
+        transform: translateY(20px);
+      }
     }
   </style>
 </head>
  
 <body>
  
-  <div class="menu-card">
+  <h1>My Weather App Homepage</h1>
  
-    <h1 class="restaurant-name">Tasty Treat Cafe</h1>
+  <p class="subtitle">
+    Check today's weather and plan your day better.
+  </p>
  
-    <p class="tagline">Fresh food, happy mood!</p>
+  <div class="weather-card">
+    <h2>Today's Weather</h2>
  
-    <div class="menu-section">
-      <h2 class="section-title">starters</h2>
+    <div class="weather-icon">Cloud</div>
  
-      <p class="dish-name">cheesy garlic bread</p>
-      <p class="dish-description">
-        Crispy bread topped with melted cheese, garlic butter, and fresh herbs.
-      </p>
+    <p id="temperature">28°C</p>
  
-      <p class="dish-name">spicy corn bites</p>
-      <p class="dish-description">
-        Crunchy corn bites served with a tangy dip for a perfect evening snack.
-      </p>
-    </div>
+    <p class="details">City: Bengaluru</p>
+    <p class="details">Condition: Partly Cloudy</p>
+    <p class="details">Humidity: 62%</p>
+    <p class="details">Wind Speed: 12 km/h</p>
+  </div>
  
-    <div class="menu-section">
-      <h2 class="section-title">main course</h2>
+  <h2>Weekly Forecast</h2>
  
-      <p class="dish-name">creamy pasta bowl</p>
-      <p class="dish-description">
-        Soft pasta cooked in creamy sauce with vegetables and delicious seasoning.
-      </p>
+  <div class="forecast-section">
+    <h3 class="forecast-title">Next 5 Days</h3>
  
-      <p class="dish-name">veggie pizza</p>
-      <p class="dish-description">
-        A colourful pizza loaded with fresh vegetables, cheese, and tasty sauce.
-      </p>
-    </div>
- 
-    <p class="special-offer">Weekend special: 20% off!</p>
- 
+    <p class="day">Monday: Sunny - 30°C</p>
+    <p class="day">Tuesday: Cloudy - 27°C</p>
+    <p class="day">Wednesday: Rainy - 24°C</p>
+    <p class="day">Thursday: Windy - 26°C</p>
+    <p class="day">Friday: Stormy - 23°C</p>
   </div>
  
 </body>
